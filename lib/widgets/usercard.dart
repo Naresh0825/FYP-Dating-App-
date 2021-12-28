@@ -17,7 +17,7 @@ class UserCard extends StatelessWidget {
         right: 20,
       ),
       child: SizedBox(
-        height: MediaQuery.of(context).size.height / 1.4,
+        height: MediaQuery.of(context).size.height / 1.5,
         width: MediaQuery.of(context).size.width,
         child: Stack(
           children: [
@@ -56,29 +56,14 @@ class UserCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    '${user.name}, ${user.age}',
-                    style: Theme.of(context)
-                        .textTheme
-                        .headline2!
-                        .copyWith(color: Colors.white),
-                  ),
-                  Text(
-                    '${user.jobTitle}',
-                    style: Theme.of(context).textTheme.headline3!.copyWith(
-                        color: Colors.white, fontWeight: FontWeight.normal),
-                  ),
-                  Text(
-                    '${user.bio}',
-                    style: Theme.of(context).textTheme.headline5!.copyWith(
-                        color: Colors.white, fontWeight: FontWeight.normal),
-                  ),
                   Row(
                     children: [
-                      UserImageSmall(imageUrls: user.imageUrls[1]),
-                      UserImageSmall(imageUrls: user.imageUrls[2]),
-                      SizedBox(
-                        width: 10,
+                      Text(
+                        '${user.name}, ${user.age}',
+                        style: Theme.of(context)
+                            .textTheme
+                            .headline2!
+                            .copyWith(color: Colors.white),
                       ),
                       Container(
                         width: 35,
@@ -92,9 +77,19 @@ class UserCard extends StatelessWidget {
                           size: 30,
                           color: Colors.black,
                         ),
-                      )
+                      ),
                     ],
-                  )
+                  ),
+                  Text(
+                    '${user.jobTitle}',
+                    style: Theme.of(context).textTheme.headline3!.copyWith(
+                        color: Colors.white, fontWeight: FontWeight.normal),
+                  ),
+                  Text(
+                    '${user.bio}',
+                    style: Theme.of(context).textTheme.headline5!.copyWith(
+                        color: Colors.white, fontWeight: FontWeight.normal),
+                  ),
                 ],
               ),
             )

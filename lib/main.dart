@@ -23,7 +23,6 @@ class MyApp extends StatelessWidget {
             create: (_) => SwipeBloc()..add(LoadUserEvent(users: User.users)))
       ],
       child: MaterialApp(
-        title: 'Flutter Demo',
         theme: theme(),
         onGenerateRoute: AppRouter.onGenerateRoute,
         initialRoute: HomeScreen.routeName,

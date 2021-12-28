@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:project/models/models.dart';
 import 'package:project/screens/screens.dart';
 import 'package:project/screens/users_screen/users_screen.dart';
 
@@ -15,7 +16,7 @@ class AppRouter {
       case DiscoverScreen.routeName:
         return DiscoverScreen.route();
       case UsersScreen.routeName:
-        return UsersScreen.route();
+        return UsersScreen.route(user: settings.arguments as User);
       default:
         return _errorRoute();
     }
